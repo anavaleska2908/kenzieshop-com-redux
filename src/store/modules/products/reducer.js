@@ -1,7 +1,9 @@
+import { FILTER_POPS, FILTER_ALL } from './actionTypes';
+
 const products = [
   {
     id: 1,
-    name: 'Boruto',
+    name: 'Boruto Uzumaki',
     category: 'Boruto',
     price: 22.99,
     image: './assets/img/boruto.jpg',
@@ -64,7 +66,7 @@ const products = [
   },
   {
     id: 10,
-    name: 'Itachi',
+    name: 'Itachi com corvos',
     category: 'Naruto',
     price: 49.99,
     image: './assets/img/itachi.jpg',
@@ -81,14 +83,14 @@ const products = [
     name: 'Naruto (Sexy no Jutsu)',
     category: 'Naruto',
     price: 49.99,
-    image: './assets/img/',
+    image: './assets/img/naruto-sexy-jutsu.jpg',
   },
   {
     id: 13,
     name: 'Azula',
     category: 'Avatar',
     price: 29.99,
-    image: './assets/img/naruto-sexy-jutsu.jpg',
+    image: './assets/img/azula.jpg',
   },
   {
     id: 14,
@@ -163,7 +165,7 @@ const products = [
   {
     id: 24,
     name: 'InuYasha e Kirara',
-    category: 'inuYasha',
+    category: 'InuYasha',
     price: 31.99,
     image: './assets/img/inuyasha-kirara.jpg',
   },
@@ -520,7 +522,7 @@ const products = [
   {
     id: 75,
     name: 'Sarada Uchiha',
-    category: 'Naruto',
+    category: 'Boruto',
     price: 25.99,
     image: './assets/img/sarada.jpg',
   },
@@ -660,7 +662,7 @@ const products = [
   {
     id: 95,
     name: 'Trunks (Super Saiyajin)',
-    category: 'Naruto',
+    category: 'Dragon Ball Z',
     price: 69.99,
     image: './assets/img/trunks.jpg',
   },
@@ -682,6 +684,12 @@ const products = [
 
 export const productsReducer = (state = products, action) => {
   switch (action.type) {
+    case FILTER_POPS:
+      return action.pops;
+
+    case FILTER_ALL:
+      return products;
+
     default:
       return state;
   }

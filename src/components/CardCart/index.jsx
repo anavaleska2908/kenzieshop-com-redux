@@ -15,7 +15,7 @@ export const CardCart = ( { item } ) => {
       </ImgButton>
       <Context>
         <p>{ item.name }</p>
-        <p>{ item.price }</p>
+        <p>U$: { item.price }</p>
       </Context>
 
       <DivButton>

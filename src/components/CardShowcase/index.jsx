@@ -1,7 +1,6 @@
-// import { useSelector } from "react-redux";
 import { Button } from '../Button';
 import { addToCartThunk } from '../../store/modules/cart/thunk';
-import {MdAddCircle} from 'react-icons/md'
+import { MdAddCircle } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { Category, Context, ImgButton, Li } from './styles';
 
@@ -23,8 +22,6 @@ export const CardShowcase = ({ item }) => {
         <p>{ item.name }</p>
         <p>U$: { item.price }</p>
       </Context>
-
-
     </Li>
   )
 }

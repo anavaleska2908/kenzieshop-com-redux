@@ -24,7 +24,7 @@ const products = [
   },
   {
     id: 4,
-    name: 'Kurosaki Ichigo (Máscara Hollow)',
+    name: 'Kurosaki Ichigo',
     category: 'Bleach',
     price: 129.99,
     image: './assets/img/ichigo-hollow.jpg',
@@ -38,7 +38,7 @@ const products = [
   },
   {
     id: 6,
-    name: 'Kurosaki Ichigo (Bankai)',
+    name: 'Kurosaki Ichigo',
     category: 'Bleach',
     price: 29.99,
     image: './assets/img/ichigo-bankai.jpg',
@@ -66,7 +66,7 @@ const products = [
   },
   {
     id: 10,
-    name: 'Itachi com corvos',
+    name: 'Itachi Uchiha',
     category: 'Naruto',
     price: 49.99,
     image: './assets/img/itachi.jpg',
@@ -178,7 +178,7 @@ const products = [
   },
   {
     id: 26,
-    name: 'Nezuko e sua caixa',
+    name: 'Nezuko Kamado',
     category: 'Demon Slayer',
     price: 99.99,
     image: './assets/img/nezuko-box.jpg',
@@ -626,7 +626,7 @@ const products = [
   },
   {
     id: 90,
-    name: 'Itachi Uchiha (Akatsuki)',
+    name: 'Itachi Uchiha',
     category: 'Naruto',
     price: 79.99,
     image: './assets/img/itachi-akatsuki.jpg',
@@ -654,14 +654,14 @@ const products = [
   },
   {
     id: 94,
-    name: 'Deku (traje de treino)',
+    name: 'Deku',
     category: 'My Hero Academia',
     price: 16.99,
     image: './assets/img/deku-training.jpg',
   },
   {
     id: 95,
-    name: 'Trunks (Super Saiyajin)',
+    name: 'Trunks',
     category: 'Dragon Ball Z',
     price: 69.99,
     image: './assets/img/trunks.jpg',

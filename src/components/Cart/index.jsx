@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useSelector } from "react-redux"
 import { CardCart } from "../CardCart"
+import { Container, Content, EmptyCart, Total } from "./styles"
 
 export const Cart = () => {
   const cart = useSelector( store => store.cart )
@@ -11,33 +12,40 @@ export const Cart = () => {
   } , [cart])
 
   return (
-    <div>
+    <Container>
+      <div>
+        <h4>Carrinho</h4>
+      </div>
+      <EmptyCart>
       {
         cart[ 0 ] !== undefined ? (
           <>
-            <ul>
+            <Content>
+           
               { cart.map( ( item ) => {
                 return (
                   <CardCart key={ item.id } item={ item }/>
                 )
               })}
-            </ul>
-            <div>
-              <p>Total</p>
-              <p>
-                U$ { cart.reduce( ( previousValue, price ) => previousValue + price.price, 0 ).toFixed( 2 ) }
+            </Content>
+            <Total>
+              <p>Total: </p>
+              <p> 
+                U$ { cart.reduce( ( previousValue, {price, quantity} ) => previousValue + price, 0 ).toFixed( 2 ) }
               </p>
-            </div>
+            </Total>
           </>
         )
         :
         (
-          <>
-            <p>Sua sacola está vazia</p>
-            <p>Adicione itens</p>
+          <>          
+           <p>Sua sacola está vazia</p>
+           <p>Adicione itens</p>
           </>
+          
         )
       }
-    </div>
+      </EmptyCart>
+    </Container>
   )
 }

@@ -1,11 +1,12 @@
 import { Button } from "../Button";
 import { useDispatch } from "react-redux";
 import { filterPopsThunk, filterAllThunks } from '../../store/modules/products/thunk'
+import { Nav } from "./styles";
 
 const filters = [
   'Naruto',
   'Boruto',
-  'One Piece',
+
   'Demon Slayer',
   'Fire Force',
   'Bleach',
@@ -16,13 +17,15 @@ const filters = [
   'InuYasha',
   'Marvel',
   'Disney',
+  'Yu-Gi-Oh',
   'Power Ranger',
   'Hunter X Hunter',
-  'Harry Potter',
-  'Yu-Gi-Oh',
+  'Harry Potter', 
   'Attack on Titan',
+  'One Piece',
+  'Dragon Ball Z',
   'Fullmetal Alchemist',
-  'Dragon Ball Z'
+ 
 ]
 
 export const Menu = () => {
@@ -34,9 +37,9 @@ export const Menu = () => {
   }
 
   return (
-    <nav>    
+    <Nav>    
       <Button onClick={() => dispatch(filterAllThunks())}>Todos</Button>
       {filters.map((filter, index) => <Button key={index} onClick={ () => handleClick(filter) }>{filter}</Button>)}
-    </nav>
+    </Nav>
   )
 }

@@ -1,5 +1,7 @@
-export const Input = ({...rest}) => {
+import { InputStyled } from "./styles"
+
+export const Input = ( { ...rest } ) => {
   return (
-    <input {...rest} /> 
+    <InputStyled {...rest} /> 
   )
 }

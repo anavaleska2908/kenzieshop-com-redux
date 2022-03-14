@@ -22,8 +22,8 @@ export const addToCartThunk = (currentProduct) => {
       );
       cart[indexProduct].count += 1;
       console.log(cart[indexProduct].count);
+      toast.success('Produto adicionado com sucesso!');
       dispatch(addToCart(cart));
-      toast.error('Produto já adicionado');
     }
   };
 };

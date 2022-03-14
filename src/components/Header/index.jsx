@@ -1,10 +1,11 @@
 import { SearchBar } from "../SearchBar"
+import { Container } from "./styles"
 
 export const Header = () => {
   return (
-    <div>
-      <h1>Pop <span>Store</span></h1>
-      <SearchBar/>
-    </div>
+    <Container>
+      <h1>POP<span>.</span>Store</h1>
+      <SearchBar />      
+    </Container>
   )
 }

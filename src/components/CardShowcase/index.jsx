@@ -1,21 +1,30 @@
 // import { useSelector } from "react-redux";
 import { Button } from '../Button';
 import { addToCartThunk } from '../../store/modules/cart/thunk';
+import {MdAddCircle} from 'react-icons/md'
 import { useDispatch } from 'react-redux';
+import { Category, Context, ImgButton, Li } from './styles';
 
 export const CardShowcase = ({ item }) => {
-  // const {products} = useSelector((state) => state)
   const dispatch = useDispatch()
-  
-  // const product = item;
 
   return (
-    <li>
-      <img src={ item.image } alt={ item.name } />
-      <p>{ item.name }</p>
-      <p>{ item.category }</p>
-      <p>{ item.price }</p>
-    <Button onClick={() => dispatch(addToCartThunk(item))} >Adicionar ao Carrinho</Button>
-    </li>
+    <Li>
+      <ImgButton>
+        <img src={ item.image } alt={ item.name } />
+        <Button onClick={ () => dispatch( addToCartThunk( item ) ) }><MdAddCircle size={ 16 }/></Button>
+      </ImgButton>
+
+      <Category>
+        <p>{ item.category }</p>
+      </Category>
+
+      <Context>
+        <p>{ item.name }</p>
+        <p>U$: { item.price }</p>
+      </Context>
+
+
+    </Li>
   )
 }

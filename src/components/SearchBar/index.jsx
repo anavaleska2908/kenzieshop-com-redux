@@ -2,6 +2,8 @@ import { Input } from '../Input';
 import { Button } from '../Button';
 import { useDispatch } from "react-redux";
 import { filterPopsThunk, filterAllThunks } from '../../store/modules/products/thunk'
+import { Container } from './styles';
+import { BsSearch } from 'react-icons/bs';
 
 export const SearchBar = () => {
   const dispatch = useDispatch()
@@ -12,9 +14,9 @@ export const SearchBar = () => {
   }
   
   return (
-    <>
-      <Input onChange={(event) => handleClick(event.target.value)} />
-      <Button>Pesquisar</Button>
-    </>
+    <Container>
+      <Input placeholder='Digite seu pop favorito' onChange={(event) => handleClick(event.target.value)} />
+      <Button><BsSearch size={12}/></Button>
+    </Container>
   )
 }

@@ -33,14 +33,14 @@ export const Context = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 1em;
-  margin-left: 2.5em;
+  margin-top: 1.3em;
+  margin-left: 1.4em;
   align-items: center;
 
   p {
     color: var(--color-primary);
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin-top: 0.4em;
   }
 `;
@@ -49,9 +49,23 @@ export const DivButton = styled.div`
   button {
     border-radius: 50%;
     margin-top: 0.5em;
+    margin-right: 2px;
 
     svg {
       margin-top: 0.1em;
     }
+  }
+`;
+
+export const Quantity = styled.div`
+  padding: 0.1em 0.6em 0.1em 0.5em;
+  margin-top: 5em;
+  margin-left: 0.5em;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+
+  P {
+    font-size: 0.7em;
+    color: var(--grey-3);
   }
 `;

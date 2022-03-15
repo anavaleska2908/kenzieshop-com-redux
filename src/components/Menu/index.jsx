@@ -6,7 +6,6 @@ import { Nav } from "./styles";
 const filters = [
   'Naruto',
   'Boruto',
-
   'Demon Slayer',
   'Fire Force',
   'Bleach',

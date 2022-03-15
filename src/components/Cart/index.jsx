@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useSelector } from "react-redux"
 import { CardCart } from "../CardCart"
-import { Container, Content, EmptyCart, Total } from "./styles"
+import { Container, Content, EmptyCart, Total } from "./styles";
 
 export const Cart = () => {
   const cart = useSelector( store => store.cart )
@@ -31,7 +31,7 @@ export const Cart = () => {
             <Total>
               <p>Total: </p>
               <p> 
-                U$ { cart.reduce( ( previousValue, {price, quantity} ) => previousValue + price, 0 ).toFixed( 2 ) }
+                U$ { cart.reduce( ( previousValue, {price, count} ) => previousValue + (price * count), 0 ).toFixed( 2 ) }
               </p>
             </Total>
           </>
